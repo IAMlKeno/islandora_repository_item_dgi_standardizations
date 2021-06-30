@@ -1,0 +1,168 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.repository_item_collections
+    - field.field.node.islandora_object.field_access_terms
+    - field.field.node.islandora_object.field_ark
+    - field.field.node.islandora_object.field_coordinates
+    - field.field.node.islandora_object.field_description
+    - field.field.node.islandora_object.field_digital_origin
+    - field.field.node.islandora_object.field_display_hints
+    - field.field.node.islandora_object.field_doi
+    - field.field.node.islandora_object.field_edtf_date_created
+    - field.field.node.islandora_object.field_edtf_date_issued
+    - field.field.node.islandora_object.field_electronic_locator
+    - field.field.node.islandora_object.field_enumeration_and_chronology
+    - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_faceted_subject
+    - field.field.node.islandora_object.field_form
+    - field.field.node.islandora_object.field_genre
+    - field.field.node.islandora_object.field_geographic_code
+    - field.field.node.islandora_object.field_geographic_subject
+    - field.field.node.islandora_object.field_handle
+    - field.field.node.islandora_object.field_hierarchical_geographic_su
+    - field.field.node.islandora_object.field_isbn
+    - field.field.node.islandora_object.field_item_identifier
+    - field.field.node.islandora_object.field_language
+    - field.field.node.islandora_object.field_lcc_classification
+    - field.field.node.islandora_object.field_linked_agent
+    - field.field.node.islandora_object.field_local_identifier
+    - field.field.node.islandora_object.field_member_of
+    - field.field.node.islandora_object.field_model
+    - field.field.node.islandora_object.field_note
+    - field.field.node.islandora_object.field_note_location
+    - field.field.node.islandora_object.field_note_paragraph
+    - field.field.node.islandora_object.field_oclc_number
+    - field.field.node.islandora_object.field_organizations
+    - field.field.node.islandora_object.field_origin_information
+    - field.field.node.islandora_object.field_part
+    - field.field.node.islandora_object.field_physical_form
+    - field.field.node.islandora_object.field_physical_location
+    - field.field.node.islandora_object.field_pid
+    - field.field.node.islandora_object.field_purl
+    - field.field.node.islandora_object.field_record_information
+    - field.field.node.islandora_object.field_reformatting_quality
+    - field.field.node.islandora_object.field_related_item_paragraph
+    - field.field.node.islandora_object.field_representative_image
+    - field.field.node.islandora_object.field_resource_type
+    - field.field.node.islandora_object.field_restriction_on_access
+    - field.field.node.islandora_object.field_rights_statement
+    - field.field.node.islandora_object.field_shelf_locator
+    - field.field.node.islandora_object.field_sub_location
+    - field.field.node.islandora_object.field_subject
+    - field.field.node.islandora_object.field_table_of_contents
+    - field.field.node.islandora_object.field_target_audience
+    - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_title
+    - field.field.node.islandora_object.field_url
+    - field.field.node.islandora_object.field_use_and_reproduction
+    - field.field.node.islandora_object.field_weight
+    - node.type.islandora_object
+  enforced:
+    module:
+      - islandora_defaults
+  module:
+    - user
+id: node.islandora_object.repository_item_collections
+targetEntityType: node
+bundle: islandora_object
+mode: repository_item_collections
+content:
+  repository_item_content_blocks_entity_view_2:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  repository_item_content_blocks_entity_view_3:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  solr_search_content_entity_view_3:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  collection_page_title_entity_view_1: true
+  display_media_entity_view_1: true
+  display_media_entity_view_2: true
+  display_media_extracted_text: true
+  display_media_service_file: true
+  display_media_thumbnail: true
+  field_access_terms: true
+  field_ark: true
+  field_coordinates: true
+  field_description: true
+  field_digital_origin: true
+  field_display_hints: true
+  field_doi: true
+  field_edtf_date_created: true
+  field_edtf_date_issued: true
+  field_electronic_locator: true
+  field_enumeration_and_chronology: true
+  field_extent: true
+  field_faceted_subject: true
+  field_form: true
+  field_genre: true
+  field_geographic_code: true
+  field_geographic_subject: true
+  field_handle: true
+  field_hierarchical_geographic_su: true
+  field_isbn: true
+  field_item_identifier: true
+  field_language: true
+  field_lcc_classification: true
+  field_linked_agent: true
+  field_local_identifier: true
+  field_member_of: true
+  field_model: true
+  field_note: true
+  field_note_location: true
+  field_note_paragraph: true
+  field_oclc_number: true
+  field_organizations: true
+  field_origin_information: true
+  field_part: true
+  field_physical_form: true
+  field_physical_location: true
+  field_pid: true
+  field_purl: true
+  field_record_information: true
+  field_reformatting_quality: true
+  field_related_item_paragraph: true
+  field_representative_image: true
+  field_resource_type: true
+  field_restriction_on_access: true
+  field_rights_statement: true
+  field_shelf_locator: true
+  field_sub_location: true
+  field_subject: true
+  field_table_of_contents: true
+  field_target_audience: true
+  field_temporal_subject: true
+  field_title: true
+  field_url: true
+  field_use_and_reproduction: true
+  field_weight: true
+  langcode: true
+  latest_update_entity_view_1: true
+  links: true
+  openseadragon_media_evas_entity_view_1: true
+  openseadragon_media_evas_entity_view_2: true
+  openseadragon_media_evas_service_file: true
+  openseadragon_paged_content_entity_view_1: true
+  paged_content_text_entity_view_1: true
+  pdfjs_media_evas_entity_view_1: true
+  pdfjs_media_evas_entity_view_2: true
+  pdfjs_media_evas_service_file: true
+  repository_item_content_blocks_classification: true
+  repository_item_content_blocks_metadata: true
+  search_api_excerpt: true
+  solr_search_content_entity_view_1: true
+  solr_search_content_entity_view_1_form: true
+  solr_search_content_entity_view_2: true
+  solr_search_content_entity_view_2_form: true
+  solr_search_content_entity_view_3_form: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.repository_item_collections_grid
+label: 'Repository Item: Collections Grid'
+targetEntityType: node
+cache: true

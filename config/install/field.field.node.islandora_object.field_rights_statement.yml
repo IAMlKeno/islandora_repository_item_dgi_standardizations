@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights_statement
+    - node.type.islandora_object
+    - taxonomy.vocabulary.rights_statements
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.islandora_object.field_rights_statement
+field_name: field_rights_statement
+entity_type: node
+bundle: islandora_object
+label: 'Rights Statement'
+description: 'RightsStatements.org provides 12 standardized rights statements for online cultural heritage.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      rights_statements: rights_statements
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

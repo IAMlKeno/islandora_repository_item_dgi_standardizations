@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.islandora_object
+  module:
+    - custom_add_another
+    - geolocation
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.islandora_object.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: islandora_object
+label: Coordinates
+description: 'Enter either in decimal (51.47879) or sexagesimal format (51° 28'' 43.644")'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

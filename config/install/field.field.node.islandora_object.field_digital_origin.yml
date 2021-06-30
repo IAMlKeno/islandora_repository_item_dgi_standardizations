@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_digital_origin
+    - node.type.islandora_object
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.islandora_object.field_digital_origin
+field_name: field_digital_origin
+entity_type: node
+bundle: islandora_object
+label: 'Digital Origin'
+description: 'The method by which a resource achieved digital form. (May indicate the source of a digital file, which is important to its creation, use, and management.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

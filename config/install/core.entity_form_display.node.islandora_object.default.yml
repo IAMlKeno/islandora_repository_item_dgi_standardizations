@@ -1,0 +1,655 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_media_browser
+    - field.field.node.islandora_object.field_access_terms
+    - field.field.node.islandora_object.field_ark
+    - field.field.node.islandora_object.field_coordinates
+    - field.field.node.islandora_object.field_description
+    - field.field.node.islandora_object.field_digital_origin
+    - field.field.node.islandora_object.field_display_hints
+    - field.field.node.islandora_object.field_doi
+    - field.field.node.islandora_object.field_edtf_date_created
+    - field.field.node.islandora_object.field_edtf_date_issued
+    - field.field.node.islandora_object.field_electronic_locator
+    - field.field.node.islandora_object.field_enumeration_and_chronology
+    - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_faceted_subject
+    - field.field.node.islandora_object.field_form
+    - field.field.node.islandora_object.field_genre
+    - field.field.node.islandora_object.field_geographic_code
+    - field.field.node.islandora_object.field_geographic_subject
+    - field.field.node.islandora_object.field_handle
+    - field.field.node.islandora_object.field_hierarchical_geographic_su
+    - field.field.node.islandora_object.field_isbn
+    - field.field.node.islandora_object.field_item_identifier
+    - field.field.node.islandora_object.field_language
+    - field.field.node.islandora_object.field_lcc_classification
+    - field.field.node.islandora_object.field_linked_agent
+    - field.field.node.islandora_object.field_local_identifier
+    - field.field.node.islandora_object.field_member_of
+    - field.field.node.islandora_object.field_model
+    - field.field.node.islandora_object.field_note
+    - field.field.node.islandora_object.field_note_location
+    - field.field.node.islandora_object.field_note_paragraph
+    - field.field.node.islandora_object.field_oclc_number
+    - field.field.node.islandora_object.field_organizations
+    - field.field.node.islandora_object.field_origin_information
+    - field.field.node.islandora_object.field_part
+    - field.field.node.islandora_object.field_physical_form
+    - field.field.node.islandora_object.field_physical_location
+    - field.field.node.islandora_object.field_pid
+    - field.field.node.islandora_object.field_purl
+    - field.field.node.islandora_object.field_record_information
+    - field.field.node.islandora_object.field_reformatting_quality
+    - field.field.node.islandora_object.field_related_item_paragraph
+    - field.field.node.islandora_object.field_representative_image
+    - field.field.node.islandora_object.field_resource_type
+    - field.field.node.islandora_object.field_restriction_on_access
+    - field.field.node.islandora_object.field_rights_statement
+    - field.field.node.islandora_object.field_shelf_locator
+    - field.field.node.islandora_object.field_sub_location
+    - field.field.node.islandora_object.field_subject
+    - field.field.node.islandora_object.field_table_of_contents
+    - field.field.node.islandora_object.field_target_audience
+    - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_title
+    - field.field.node.islandora_object.field_url
+    - field.field.node.islandora_object.field_use_and_reproduction
+    - field.field.node.islandora_object.field_weight
+    - node.type.islandora_object
+  enforced:
+    module:
+      - islandora_defaults
+  module:
+    - controlled_access_terms
+    - entity_browser
+    - field_group
+    - link
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_summary_details:
+      children:
+        - field_model
+        - field_member_of
+        - field_representative_image
+        - field_title
+        - field_resource_type
+        - field_description
+        - field_language
+      parent_name: ''
+      weight: 9
+      format_type: details
+      region: content
+      format_settings:
+        description: ''
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Summary
+    group_identifiers_details:
+      children:
+        - field_local_identifier
+      parent_name: ''
+      weight: 10
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Identifiers
+    group_persons_and_affiliations_d:
+      children:
+        - field_linked_agent
+        - field_organizations
+      parent_name: ''
+      weight: 11
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Persons and Affiliations'
+    group_subjects_and_class_details:
+      children:
+        - field_genre
+        - field_subject
+        - field_temporal_subject
+        - field_geographic_subject
+      parent_name: ''
+      weight: 12
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Subjects and Classifications'
+    group_origin_information_details:
+      children:
+        - field_origin_information
+      parent_name: ''
+      weight: 13
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Origin Information'
+    group_physical_description_detai:
+      children:
+        - field_extent
+        - field_physical_form
+        - field_note
+      parent_name: ''
+      weight: 14
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Physical Description'
+    group_notes_details:
+      children:
+        - field_note_paragraph
+      parent_name: ''
+      weight: 15
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Notes
+    group_relationships_details:
+      children:
+        - field_related_item_paragraph
+      parent_name: ''
+      weight: 16
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Relationships
+    group_location_details:
+      children:
+        - field_physical_location
+        - field_sub_location
+        - field_shelf_locator
+        - field_electronic_locator
+        - field_form
+        - field_note_location
+        - field_enumeration_and_chronology
+        - field_item_identifier
+        - field_url
+      parent_name: ''
+      weight: 17
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Location
+    group_access_and_rights_details:
+      children:
+        - field_access_terms
+        - field_restriction_on_access
+        - field_use_and_reproduction
+        - field_rights_statement
+      parent_name: ''
+      weight: 18
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Access and Rights'
+    group_part_details:
+      children:
+        - field_part
+      parent_name: ''
+      weight: 40
+      format_type: details
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Part
+    group_record_information_details:
+      children:
+        - field_record_information
+      parent_name: ''
+      weight: 41
+      format_type: details
+      region: hidden
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Record Information'
+id: node.islandora_object.default
+targetEntityType: node
+bundle: islandora_object
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_access_terms:
+    type: options_buttons
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: string_textarea
+    weight: 42
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_display_hints:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_electronic_locator:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_enumeration_and_chronology:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_extent:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_form:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_genre:
+    type: entity_reference_autocomplete
+    weight: 40
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_geographic_subject:
+    type: entity_reference_autocomplete
+    weight: 44
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_item_identifier:
+    weight: 41
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_language:
+    weight: 43
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_linked_agent:
+    weight: 55
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: typed_relation_default
+    region: content
+  field_local_identifier:
+    type: string_textfield
+    weight: 48
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_member_of:
+    type: entity_reference_autocomplete
+    weight: 38
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+  field_model:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_note:
+    type: string_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_note_location:
+    weight: 39
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_note_paragraph:
+    type: entity_reference_paragraphs
+    weight: 34
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_organizations:
+    weight: 56
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: typed_relation_default
+    region: content
+  field_origin_information:
+    type: entity_reference_paragraphs
+    weight: 35
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_physical_form:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_physical_location:
+    type: string_textfield
+    weight: 34
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_related_item_paragraph:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_representative_image:
+    type: entity_browser_entity_reference
+    weight: 39
+    region: content
+    settings:
+      entity_browser: image_media_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: representative_object_media
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+  field_resource_type:
+    weight: 41
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_restriction_on_access:
+    weight: 22
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_rights_statement:
+    type: entity_reference_autocomplete
+    weight: 24
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_shelf_locator:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sub_location:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subject:
+    weight: 41
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_temporal_subject:
+    type: entity_reference_autocomplete
+    weight: 43
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: entity_reference_paragraphs
+    weight: 40
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_url:
+    weight: 42
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_use_and_reproduction:
+    weight: 23
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 1
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  field_ark: true
+  field_coordinates: true
+  field_digital_origin: true
+  field_doi: true
+  field_edtf_date_created: true
+  field_edtf_date_issued: true
+  field_faceted_subject: true
+  field_geographic_code: true
+  field_handle: true
+  field_hierarchical_geographic_su: true
+  field_isbn: true
+  field_lcc_classification: true
+  field_oclc_number: true
+  field_part: true
+  field_pid: true
+  field_purl: true
+  field_record_information: true
+  field_reformatting_quality: true
+  field_table_of_contents: true
+  field_target_audience: true
+  field_weight: true
+  langcode: true
